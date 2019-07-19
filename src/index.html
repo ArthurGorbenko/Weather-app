@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <main class="app">
+      <aside class="aside">
+        <section
+          class="aside__block aside__block_favorites custom_background_components"
+        >
+          <h4 class="aside__block__titles">Favorites</h4>
+          <ul class="aside__block_favorites__list">
+            <li class="aside__block_favorites__list_element">Kiev,UA</li>
+            <li class="aside__block_favorites__list_element">Khabarovsk,RU</li>
+            <li class="aside__block_favorites__list_element">Moskow,RU</li>
+          </ul>
+        </section>
+        <section
+          class="aside__block aside__block_history custom_background_components"
+        >
+          <h4 class="aside__block__titles ">History</h4>
+          <ul class="aside__block_history__list">
+              <li class="aside__block_favorites__list_element">Kiev,UA</li>
+              <li class="aside__block_favorites__list_element">Khabarovsk,RU</li>
+              <li class="aside__block_favorites__list_element">Moskow,RU</li>
+          </ul>
+        </section>
+      </aside>
+      <div class="wrapper__main-info">
+        <input
+          type="search"
+          class="search__input custom_background_components"
+          value="Search..."
+        />
+        <section class="main-info__today custom_background_components">
+          <div class="wrapper_main-info__today_header">
+            <h3 class="main-info__today_header">Kiev</h3>
+            <button type="button" class="main-info__today_add-to-fav" value="">
+              Add to fav
+            </button>
+          </div>
+          <div class="wrapper_main-info__today">
+            <img
+              src="images/sunny23.svg"
+              alt="picture weather"
+              class="main-info__today_image"
+            />
+            <div class="main-info__today_current-temperature">+20</div>
+            <div class="wrapper_main-info__today_mesurements">
+              <img
+                src="images/celsius.svg"
+                alt="picture celsius"
+                class="main-info__today_mesurements"
+              />
+              <button type="button" class="button_switch-mesurments">
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="witch-mesurments_logo"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 336.801 336.801"
+                  style="enable-background:new 0 0 336.801 336.801;"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M43.702,0C23.197,0,6.519,16.679,6.519,37.183c0,20.495,16.679,37.173,37.184,37.173c20.504,0,37.183-16.679,37.183-37.173
+		C80.885,16.679,64.206,0,43.702,0z M43.702,48.097c-6.022,0-10.925-4.893-10.925-10.914c0-6.021,4.903-10.924,10.925-10.924
+		c6.021,0,10.924,4.903,10.924,10.924C54.626,43.204,49.723,48.097,43.702,48.097z"
+                    />
+                    <path
+                      d="M317.153,51.758H144.871c-7.252,0-13.129,5.878-13.129,13.129v258.784c0,7.252,5.878,13.129,13.129,13.129
+		S158,330.923,158,323.672V206.584h96.645c7.252,0,13.129-5.878,13.129-13.129c0-7.253-5.878-13.129-13.129-13.129H158V78.017
+		h159.153c7.253,0,13.129-5.878,13.129-13.129C330.283,57.636,324.406,51.758,317.153,51.758z"
+                    />
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="wrapper_main-info__today_additional">
+            <div class="wrapper_main-info__today_option option_wind">
+              <img src="images/wind.png" alt="wind image" class="option_icon" />
+              <span class="option_text">10m/s</span>
+            </div>
+            <div class="wrapper_main-info__today_option option_pressure">
+              <img
+                src="images/pressure.png"
+                alt="wind image"
+                class="option_icon"
+              /><span class="option_text">2000 Pa</span>
+            </div>
+            <div class="wrapper_main-info__today_option option_humidity">
+              <img
+                src="images/humidity.png"
+                alt="wind image"
+                class="option_icon"
+              /><span class="option_text">70%</span>
+            </div>
+            <div class="wrapper_main-info__today_option option_visibility">
+              <img
+                src="images/visibility.png"
+                alt="wind image"
+                class="option_icon option_icon_visibility"
+              /><span class="option_text">2000 m</span>
+            </div>
+          </div>
+        </section>
+        <section class="main-info__week custom_background_components">
+          <ul class="main-info__week_list">
+            <li class="main-info__week_day-card">
+              <h5 class="main-info__week_day-card_title">mn</h5>
+              <img
+                src="images/rainy12.svg"
+                alt="monday image"
+                class="main-info__week_day-card_image"
+              />
+              <span class="main-info__week_day-card_monday-deg">+17</span>
+            </li>
+            <li class="main-info__week_day-card">
+              <h5 class="main-info__week_day-card_title">ts</h5>
+              <img
+                src="images/sunny16.svg"
+                alt="monday image"
+                class="main-info__week_day-card_image"
+              />
+              <span class="main-info__week_day-card_monday-deg">+25</span>
+            </li>
+            <li class="main-info__week_day-card">
+              <h5 class="main-info__week_day-card_title">wd</h5>
+              <img
+                src="images/cloud-4.svg"
+                alt="monday image"
+                class="main-info__week_day-card_image"
+              />
+              <span class="main-info__week_day-card_monday-deg">+19</span>
+            </li>
+            <li class="main-info__week_day-card">
+              <h5 class="main-info__week_day-card_title">th</h5>
+              <img
+                src="images/sky.svg"
+                alt="monday image"
+                class="main-info__week_day-card_image"
+              />
+              <span class="main-info__week_day-card_monday-deg">+17</span>
+            </li>
+            <li class="main-info__week_day-card">
+              <h5 class="main-info__week_day-card_title">fr</h5>
+              <img
+                src="images/rain50.svg"
+                alt="monday image"
+                class="main-info__week_day-card_image"
+              />
+              <span class="main-info__week_day-card_monday-deg">+20</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
