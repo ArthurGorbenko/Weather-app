@@ -63,12 +63,38 @@ body {
   border-top: 1px solid black;
 }
 
+.wrapper__main-info_search-field {
+  display: inline-block;
+  position: relative;
+}
+
 .search__input {
   border: none;
   width: 100%;
   height: 50px;
   font-size: 20px;
   padding: 10px;
+}
+
+.search-field_button {
+  display: block;
+  position: absolute;
+  right: 7px;
+  top: 5px;
+  height: 40px;
+  background: transparent;
+  border: none;
+}
+
+.search-field_button:hover {
+  cursor: pointer;
+}
+
+.search-field_icon {
+  height: 40px;
+  border-radius: 50px;
+  background: white;
+  opacity: 0.8;
 }
 
 .wrapper__main-info {

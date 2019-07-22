@@ -1,2 +1,2 @@
-import {App} from './components/app/'
-new App();
+import {App} from './components/App'
+new App(document.querySelector('.app'));
