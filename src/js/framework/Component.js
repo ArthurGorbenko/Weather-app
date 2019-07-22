@@ -14,6 +14,7 @@ export default class Component {
         const content = this.render;
         if (typeof content === 'string'){
             this.host.innerHTML = content;
+            document.getElementsByTagName('body').apppendChild(this.host.innerHTML);
         } else {
             content
             .map(item => this._vDomComponentstoHtmlELem(item))
@@ -47,6 +48,7 @@ export default class Component {
                    container.apppendChild(htmlElement);
                 })
             }
+            
             return container;
         }
     }
