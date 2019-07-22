@@ -1,4 +1,4 @@
-import { Component } from "../../framework";
+import { Component } from "../../../framework";
 
 export default class SearchHistory extends Component {
     constructor(host,props) {
