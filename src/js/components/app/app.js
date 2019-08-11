@@ -7,26 +7,36 @@ import { WeatherForecast } from "../WeatherForecast";
 export default class App extends Component {
   constructor(host, props) {
     super(host, props);
-  }
+    
+  }  
+
   render() {
     return [
       {
-        tag : "main",
-        classList : "app",
-        childrens : [
+        tag: Aside,
+        tagName: "aside",
+        classList: "aside"
+      },
+      {
+        tag: "div",
+        classList: "wrapper__main-info",
+        childrens: [
           {
-            tag : Aside
+            tag: SearchBar,
+            tagName: "div",
+            classList: "wrapper__main-info_search-field"
           },
           {
-            tag : SearchBar,
+            tag: CurrentWeather,
+            tagName: "section",
+            classList: ["main-info__today", "custom_background_components"],
           },
-          {
-            tag : CurrentWeather,
-          },
-          {
-            tag : WeatherForecast,
-          },
-        ],
+            {
+            tag: WeatherForecast,
+            tagName: "section",
+            classList: ["main-info__week", "custom_background_components"]
+          }
+        ]
       }
     ];
   }

@@ -12,9 +12,16 @@
     "build-dev": "parcel build ./src/index.html --no-minify --public-url ./",
     "prebuild": "shx rm -rf dist/",
     "build": "parcel build ./src/index.html --public-url ./",
-    "publish": "push-dir --dir=dist --branch=gh-pages"
+    "publish": "push-dir --dir=dist --branch=gh-pages",
+    "eslint" : "./node_modules/.bin/eslint"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "shx": "^0.3.2"
+  },
+  "dependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "eslint": "^6.1.0"
   }
 }
