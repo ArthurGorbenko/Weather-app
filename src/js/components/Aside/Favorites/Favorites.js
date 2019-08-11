@@ -1,5 +1,6 @@
 import { Component } from "../../../framework";
 import AppState from "../../../Services/AppState";
+import WeatherDataService from '../../../Services/WeatherDataService'
 
 export default class Favorites extends Component {
   constructor(host, props) {
@@ -13,10 +14,19 @@ export default class Favorites extends Component {
   }
 
   updateMyself(subState) {
+    console.log(subState);
+    if(this.favoriteCities.some(element => {
+      return `${subState.name},${subState.country}` === element.content
+    })){
+      return ;
+    };
     subState = {
       tag : "li",
       classList : "aside__block_favorites__list_element",
       content : `${subState.name},${subState.country}`,
+      eventHandlers : {
+        "click" : onClick
+      }
     }
     this.favoriteCities.push(subState);
     this._render();
@@ -36,4 +46,13 @@ export default class Favorites extends Component {
           }
         ]
       }
+  }
+
+  function onClick () {
+    WeatherDataService.getCurrentWeather(this.innerHTML).then(data => {
+      AppState.update("CURRENT_FORECAST", data);
+    });
+    WeatherDataService.getWeatherForecast(this.innerHTML).then(data => {
+      AppState.update("FORECAST_FIVE_DAYS", data);
+    });
   }
