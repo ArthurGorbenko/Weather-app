@@ -16,6 +16,7 @@ export default class Autocomplete extends Component {
     if (subState.length !== 0) {
       this.host.classList.remove("visually-hidden");
     } else {
+      this.state = undefined;
       this.host.classList.add("visually-hidden");
     }
     subState = subState.map(element => {

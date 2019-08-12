@@ -15,8 +15,6 @@ export default class CurrentTemperature extends Component {
   }
 
   updateMySelf(subState) {
-
-    console.log(subState);
     if(subState.hasOwnProperty("temp")){
       subState = {
       temperature : subState.main.temp

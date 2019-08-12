@@ -1,5 +1,4 @@
 import { Component } from "../../framework";
-import imageUrlUnit from "../../../images/celsius.svg";
 import imageUrlWind from "../../../images/wind.png";
 import imageUrlPressure from "../../../images/pressure.png";
 import imageUrlHumidity from "../../../images/humidity.png";
@@ -48,10 +47,6 @@ export default class CurrentWeather extends Component {
 
   makeFavorite() {
     AppState.update("FAVORITES", { name: this.state.name, country: this.state.country });
-  }
-
-  switchUnits() {
-    AppState.update("UNITS", )
   }
 
   render() {

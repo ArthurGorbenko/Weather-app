@@ -4,7 +4,7 @@
 }
 
 body {
-  background: url("../images/background_image.png");
+  background: url("../images/background_image.png")no-repeat #000000;
   font-family: "Righteous", cursive;
 }
 
@@ -47,6 +47,11 @@ body {
 .aside__block__titles {
   padding: 1em 1em 0.4em 1em;
   font-size: 22px;
+}
+
+.aside__lists__labels {
+  font-size: 25px;
+  margin: 1em;
 }
 
 .aside__block_favorites {
@@ -114,10 +119,8 @@ body {
 .autocomplete-list {
   position: absolute;
   z-index: 2;
-  background: grey;
-  opacity: 0.8;
   padding: 1em;
-  height : 100px;
+  height : 50px;
   width: 400px;
   border-radius: 0px;
   overflow : auto;
@@ -158,7 +161,7 @@ body {
 }
 
 .main-info__today_header {
-  font-size: 70px;
+  font-size: 40px;
 }
 
 .main-info__today_add-to-fav {
@@ -184,7 +187,7 @@ body {
 }
 
 .wrapper_main-info__today_mesurements {
-  margin: auto 10px;
+  margin-top: 90px;
 }
 
 .main-info__today_mesurements {
@@ -277,4 +280,23 @@ body {
 
 .main-info__week_day-card_monday-deg {
   font-size: 30px;
+}
+
+@media (max-width:900px) {
+  .app {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .wrapper__main-info {
+    margin: 0 auto;
+  }
+  .aside {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+  }
+  .aside__block {
+    width: 300px;
+  }
 }

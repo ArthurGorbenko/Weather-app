@@ -1,6 +1,5 @@
 import { Component } from "../../framework";
 import imageUrl from "../../../images/search1.png";
-import WeatherDataService from "../../Services/WeatherDataService";
 import AppState from '../../Services/AppState';
 import cities from "../../Assets/cities";
 import { Autocomplete } from "../Autocomplete/index.js"
@@ -8,8 +7,12 @@ import { Autocomplete } from "../Autocomplete/index.js"
 export default class SearchBar extends Component {
   constructor(host, props) {
     super(host, props);
+    AppState.watch("HISTORY_UPDATE",this.updateMySelf);
       }
 
+      updateMySelf(subState) {
+        document.querySelector('.search__input').value = "";
+      }
   onSearch() {
     if(this.value.length < 3) {
       AppState.update("AUTOCOMPLETE_CITIES",[])
@@ -64,7 +67,7 @@ export default class SearchBar extends Component {
       {
         tag : Autocomplete,
         tagName : "ul",
-        classList : ["autocomplete-list","visually-hidden"],
+        classList : ["custom_background_components","autocomplete-list","visually-hidden"],
       }
     ];
   }

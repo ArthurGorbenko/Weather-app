@@ -49,7 +49,7 @@ export default class SearchHistory extends Component {
           {
             tag: "ul",
             classList: "aside__block_history__list",
-            childrens: [...this.data]||null,
+            childrens: this.data.length === 0 ? [{tag:"li",classList : "aside__lists__labels",content:"You did not search for any cities yet..."}] : [...this.data]
           }
         ]
       }

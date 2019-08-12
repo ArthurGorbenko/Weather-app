@@ -14,7 +14,6 @@ export default class Favorites extends Component {
   }
 
   updateMyself(subState) {
-    console.log(subState);
     if(this.favoriteCities.some(element => {
       return `${subState.name},${subState.country}` === element.content
     })){
@@ -42,7 +41,7 @@ export default class Favorites extends Component {
           {
             tag: "ul",
             classList: "aside__block_favorites__list",
-            childrens: [...this.favoriteCities]||null
+            childrens: this.favoriteCities.length === 0 ? [{tag:"li",classList : "aside__lists__labels",content:"You did not add  any cities to favorites yet..."}] : [...this.favoriteCities]
           }
         ]
       }

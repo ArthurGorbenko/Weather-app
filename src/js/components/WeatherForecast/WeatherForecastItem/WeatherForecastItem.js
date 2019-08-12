@@ -13,7 +13,6 @@ export default class WeatherForecastItem extends Component {
   }
 
   updateMySelf (subState) {
-    console.log(subState);
     if(subState.units === "F") {
       this.props.temp = Math.round(this.props.temp * (9/5) + 32);
       } else {
