@@ -11,10 +11,8 @@
     "prebuild-dev": "shx rm -rf dist/",
     "build-dev": "parcel build ./src/index.html --no-minify --public-url ./",
     "prebuild": "shx rm -rf dist",
-    "build": "parcel build ./src/index.html",
-    "publishs": "push-dir --dir=dist --branch=gh-pages",
-    "deploy": "gh-pages -d dist",
-    "eslint": "./node_modules/.bin/eslint"
+    "build": "parcel build src/index.html --public-url ./",
+    "publishs": "push-dir --dir=dist --branch=gh-pages"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -23,9 +21,6 @@
     "shx": "^0.3.2"
   },
   "dependencies": {
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "eslint": "^6.1.0",
-    "gh-pages": "^2.1.1",
-    "http2": "^3.3.7"
+    "babel-plugin-transform-runtime": "^6.23.0"
   }
 }
