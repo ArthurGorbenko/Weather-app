@@ -31,9 +31,11 @@ export default class CurrentTemperature extends Component {
   }
 
   render() {
-    return [
-      `${this.state.temperature || this.props.temperature}${this.state.units ||
+    return [{
+      tag : "div",
+      content : `${this.state.temperature || this.props.temperature}&deg;${this.state.units ||
         this.props.units}`,
+      }
     ];
   }
 }

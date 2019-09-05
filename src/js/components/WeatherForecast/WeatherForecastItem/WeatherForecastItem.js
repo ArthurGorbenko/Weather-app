@@ -36,7 +36,7 @@ export default class WeatherForecastItem extends Component {
       {
         tag: "span",
         classList: "main-info__week_day-card_monday-deg",
-        content: `${this.props.temp||"__"}${this.state === undefined ? "&deg;C" : this.state.units}`
+        content: `${this.props.temp||"__"}${this.state === undefined ? "&deg;C" : "&deg;" + this.state.units}`
       }
     ];
   }
