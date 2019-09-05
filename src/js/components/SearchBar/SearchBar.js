@@ -19,7 +19,7 @@ export default class SearchBar extends Component {
       return;
     }
     const query = this.value;
-    const result = cities.filter(cityName => cityName.startsWith(query));
+    const result = cities.filter(cityName => cityName.toLowerCase().startsWith(query.toLowerCase()));
     AppState.update("AUTOCOMPLETE_CITIES",result);   
     
   }
