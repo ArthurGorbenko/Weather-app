@@ -24,7 +24,14 @@ export default class Favorites extends Component {
       classList : "aside__block_favorites__list_element",
       content : `${subState.name},${subState.country}`,
       eventHandlers : {
-        "click" : onClick
+        "click" : function() {
+          WeatherDataService.getCurrentWeather(this.innerHTML).then(data => {
+            AppState.update("CURRENT_FORECAST", data);
+          });
+          WeatherDataService.getWeatherForecast(this.innerHTML).then(data => {
+            AppState.update("FORECAST_FIVE_DAYS", data);
+          });
+        }
       }
     }
     this.favoriteCities.push(subState);
@@ -47,11 +54,4 @@ export default class Favorites extends Component {
       }
   }
 
-  function onClick () {
-    WeatherDataService.getCurrentWeather(this.innerHTML).then(data => {
-      AppState.update("CURRENT_FORECAST", data);
-    });
-    WeatherDataService.getWeatherForecast(this.innerHTML).then(data => {
-      AppState.update("FORECAST_FIVE_DAYS", data);
-    });
-  }
+   

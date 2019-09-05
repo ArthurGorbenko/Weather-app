@@ -4,7 +4,7 @@ import WeatherDataService from "../../Services/WeatherDataService";
 import AppState from "../../Services/AppState";
 
 const indexToDay = [
-  "sun","mon","tue","wed","thu","fri","sut"
+  "sun","mon","tue","wed","thu","fri","sat"
 ]
 
 export default class WeatherForecast extends Component {

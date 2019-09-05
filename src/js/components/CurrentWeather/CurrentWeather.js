@@ -99,11 +99,6 @@ export default class CurrentWeather extends Component {
             tag: "div",
             classList: "wrapper_main-info__today_mesurements",
             childrens: [
-              // {
-              //   tag: "img",
-              //   classList: "main-info__today_mesurements",
-              //   src: imageUrlUnit
-              // },
               {
                 tag: SwitchUnits,
                 tagName : "button",
